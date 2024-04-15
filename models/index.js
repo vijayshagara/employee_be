@@ -11,9 +11,9 @@ const db = {};
 
 let sequelize;
 // Check if config is properly loaded
-if (!config) {
-  throw new Error(`Unable to load database configuration for environment '${env}'`);
-}
+// if (!config) {
+//   throw new Error(`Unable to load database configuration for environment '${env}'`);
+// }
 
 sequelize = new Sequelize(config.database, config.username, config.password, {
   host: config.host,
