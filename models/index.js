@@ -15,9 +15,9 @@ let sequelize;
 //   throw new Error(`Unable to load database configuration for environment '${env}'`);
 // }
 
-sequelize = new Sequelize(config.database, config.username, config.password, {
+sequelize = new Sequelize(config.username, config.password,config, {
   host: config.host,
-  dialect: 'postgres' // Assuming you're using PostgreSQL
+  dialect: 'postgres'
 });
 
 fs
